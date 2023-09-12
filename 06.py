@@ -1,9 +1,16 @@
 #06 0?
 #整数値を入力させ、値が0ならzeroと表示するプログラムを作成せよ。
-input = 0
-if input == 0:
+string = int(input("整数値を入力してください:"))
+if string == 0:
     print("zero")
 
-input2 = 10
-if input2 == 0:
+#else :
+    #print("ZEROではないので数値を再入力してください")
+
+
+string2 = int(input("二つ目の整数値を入力してください:"))
+if string2 == 0:
     print("zero")
+    
+#else :
+    #print("ZEROではないので数値を再入力してください")
