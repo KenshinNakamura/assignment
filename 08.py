@@ -18,3 +18,5 @@ if string2 == 0:
 
 else :
     print("not zero")
+
+    #11
