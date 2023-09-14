@@ -3,7 +3,7 @@
 #input = 123
 #print(input*3)
 
-string = int(input("整数値を入力してください:"))
-print(string*3)
+int_num = int(input("整数値を入力してください:"))
+print(int_num*3)
 
 #print("文字列", string, "が入力されました。")
