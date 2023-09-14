@@ -9,3 +9,4 @@ if int_num <= -10 or int_num >= 10:
     print("OK")
 else:
     print("NG")
+#1
