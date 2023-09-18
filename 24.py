@@ -5,8 +5,7 @@
 int_num = int(input("整数値を入力してください: "))
     
     # 条件をチェックして結果を表示
-if int_num <= -10 or int_num >= 10:
+if 0 > int_num >= -10 or int_num >= 10:
     print("OK")
 else:
     print("NG")
-#1

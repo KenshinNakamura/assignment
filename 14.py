@@ -1,7 +1,7 @@
 #14 カウントダウン
 #整数値を入力させ、入力値から0まで数を1ずつ減らして表示するプログラムを作成せよ。
-x = 10
+int_num = int(input("整数値を入力してください:"))
 
-while x>0:
-  print(x)  
-  x-= 1
+while int_num > 0:
+  print(int_num)  
+  int_num -= 1

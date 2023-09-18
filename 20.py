@@ -6,5 +6,9 @@ stringX = int(input("一つ目の整数値を入力してください:"))
 stringY = int(input("二つ目の整数値を入力してください:"))
 result = (stringX // stringY)
 result2 = (result * stringY)
-print(result)
-print(result2)
+print("result:" + result)
+print("result:" + result2)
+#結果に文字resurl: を追加する
+
+#result, result2
+ #これを別の変数に入れてから、printで表示して下さい。
