@@ -6,5 +6,6 @@
 
 #入力させる
 
-string = input("整数値を入力してください:")
-print(string)
+int_num = input("整数値を入力してください:") 
+
+print("your number is " + int_num)
