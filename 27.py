@@ -4,13 +4,15 @@
 
     # 整数値を入力させる
 num = int(input("整数値を入力してください: "))
-    
-    # 条件に応じて総和を計算
-if num <= 0:
-        total = 0
-else:
-        total = sum(range(1, num + 1))
-    
-print("総和:", total)
+total = 0
 
+if num <= 0:
+    total = 0
+else:
+    i = 1
+    while i <= num:
+        total += i
+        i += 1
+
+print("総和:", total)
 
