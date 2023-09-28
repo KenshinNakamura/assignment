@@ -5,12 +5,15 @@
 array = [0] * 10
 
 # リストの要素を順に表示
-for i in range(10):
-    user_input = int(input(f"整数値を入力してください（要素 {i+1}/10）:"))
+user_input = int(input(f"整数値を入力してください :"))
+for i in range(1):
+    
     array[i]   = user_input
 
 print("配列の要素")
-for i in range(10):
+for i in range(1):
     print(array[i]) 
 
 
+#(1) 入力した値を配列10個に格納
+#(2) 配列10個を表示

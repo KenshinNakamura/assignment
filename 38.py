@@ -14,9 +14,6 @@ array = [3, 7, 0, 8, 4, 1, 9, 6, 5, 2]
 index_num = 0
 
 for _ in array:
-    print(f"要素番号 {index_num}: {array[index_num]}" )
+    print(f"{index_num}番目の要素: {array[index_num]}" )
 
     index_num = array[index_num]
-
-print(f"最終要素番号: {index_num}")
-print(f"最終要素の値: {array[index_num]}")
