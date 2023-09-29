@@ -4,4 +4,5 @@
 
 num = int(input("整数値を入力してください:"))
 AbsoluteValue = abs(num)
-print("absolute value is" + AbsoluteValue)
+print(f"input number :" , num)
+print(f"absolute value is" , AbsoluteValue)

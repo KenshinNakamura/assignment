@@ -7,12 +7,10 @@
 #for string in range(y +1):
         #print(y)
 
-try:
-    # 整数値の入力を受け付ける
-    n = int(input("整数値を入力してください: "))
 
+    # 整数値の入力を受け付ける
+num = int(input("整数値を入力してください: "))
+print(f"input number :" , num)
     # 0から入力値までの数を1ずつ増やして表示
-    for i in range(n +1):
+for i in range(num +1):
         print(i)
-except ValueError:
-    print("無効な入力です。整数値を入力してください。")

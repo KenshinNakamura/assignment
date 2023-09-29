@@ -6,12 +6,12 @@ array = [0] * 10
 
 # リストの要素を順に表示
 user_input = int(input(f"整数値を入力してください :"))
-for i in range(1):
+print(f"input number :" , user_input)
+for i in range(10):
     
     array[i]   = user_input
 
-print("配列の要素")
-for i in range(1):
+for i in range(10):
     print(array[i]) 
 
 

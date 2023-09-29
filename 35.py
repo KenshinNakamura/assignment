@@ -12,4 +12,4 @@ array = [3, 7, 0, 8, 4, 1, 9, 6, 5, 2]
 
 # 配列要素の値を表示
 if 0 <= num < len(array): #len(array)はデータの長さ(10)
-    print("要素番号", num, "の値は", array[num], "です。")
+    print(f"array[{num}] = {array[num]}" )
