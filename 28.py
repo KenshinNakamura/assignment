@@ -5,7 +5,8 @@
 
     # 整数値を入力させる
 num = int(input("整数値を入力してください: "))
-    
+print(f"input number :" , num)
+
     # 階乗を計算
 if num <= 0:
         factorial = 1

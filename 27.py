@@ -3,6 +3,7 @@
 #ただし、0以下の値を入力した場合は0と表示する。
 
 num = int(input("整数値を入力してください: "))
+print(f"input number :" , num)
 total = 0
 
 if num <= 0:

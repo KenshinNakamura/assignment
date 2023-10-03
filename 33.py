@@ -3,6 +3,7 @@
 
 
 num = int(input("整数値を入力してください: ")) 
+print(f"input number :" , num)
 
 for i in range(1, 10):
     if i  != num:

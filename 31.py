@@ -4,7 +4,8 @@
 
 
 num = int(input("整数値を入力してください: "))
-    
+print(f"input number :" , num)
+
 if num <= 0:
     print("再入力")
 else:

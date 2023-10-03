@@ -3,6 +3,7 @@
 #入力値が9の場合は9のみ表示しない。
 
 num = int(input("整数値を入力してください: "))
+print(f"input number :" , num)
 
 i = 1
 while i <= 9:

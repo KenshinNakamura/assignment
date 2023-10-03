@@ -5,6 +5,8 @@
 
 num1 = int(input("一つ目の整数値を入力してください: "))
 num2 = int(input("二つ目の整数値を入力してください: "))
+print(f"input number :" , num1)
+print(f"input number :" , num2)
 
 # 配列を初期化
 array = [3, 7, 0, 8, 4, 1, 9, 6, 5, 2]
