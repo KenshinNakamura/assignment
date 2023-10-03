@@ -3,7 +3,8 @@
 
     # 整数値を入力させる
 num = int(input("整数値を入力してください: "))
-    
+print(f"input number :" , num)
+
     # 条件をチェックして結果を表示
 if -5 <= num < 10:
     print("OK")

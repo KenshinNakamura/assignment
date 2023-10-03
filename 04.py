@@ -5,6 +5,7 @@
 
 int_num = int(input("整数値を入力してください:"))
 result = (int_num*3)
-print("結果は" + result)
+print(f"input number:", int_num)
+print(f"answer =", result)
 
 #print("文字列", string, "が入力されました。")

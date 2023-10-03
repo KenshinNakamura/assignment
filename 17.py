@@ -6,4 +6,4 @@ array = [i for i in range(10)]
 
 # リストの要素を順に表示
 for i in range(10):
-    print(f"array[{i}] = {array[i]}")
+    print(f"{array[i]}")

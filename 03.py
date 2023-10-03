@@ -8,4 +8,5 @@
 
 int_num = input("整数値を入力してください:") 
 
-print("your number is " + int_num)
+print(f"input number :",int_num)
+print(f"your number is " + int_num)

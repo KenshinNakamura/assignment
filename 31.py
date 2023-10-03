@@ -4,11 +4,19 @@
 
 
 num = int(input("整数値を入力してください: "))
+print(f"input number :" , num)
+
+if num <= 0:
+    print("再入力")
+else:
     
-    # 入力値が0より大きい場合に * とスペースを交互に表示
-if num > 0:
-        for i in range(1, num + 1):
-            print("*", end=" ")
-            if i % 5 == 0:
-                print("", end="\n")  # 5個ごとに改行
+    for i in range(1, num + 1):
+        if i % 5 == 0:
+            print(" ", end="")
+        else:
+            print("*", end="")
+    
+    print()
+
+
 

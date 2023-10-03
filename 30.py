@@ -3,7 +3,8 @@
 #入力値が0以下の値の場合は何も書かなくてよい。
 
 num = int(input("整数値を入力してください: "))
-    
+print(f"input number :" , num)
+
     # 入力値が0より大きい場合に * を表示
 if num > 0:
         print("*" * num)

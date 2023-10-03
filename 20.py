@@ -4,6 +4,8 @@
 
 stringX = int(input("一つ目の整数値を入力してください:"))
 stringY = int(input("二つ目の整数値を入力してください:"))
+print(f"input number :" , stringX)
+print(f"input number :" , stringY)
 result = (stringX // stringY)
 result2 = (result * stringY)
 print("result:" + result)

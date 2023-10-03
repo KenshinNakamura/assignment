@@ -4,7 +4,8 @@
 
     # 整数値を入力させる
 int_num = int(input("整数値を入力してください: "))
-    
+print(f"input number :" , int_num)    
+
     # 条件をチェックして結果を表示
 if 5 < int_num < 20:
         print("OK")
