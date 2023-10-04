@@ -8,7 +8,10 @@ print(f"input number :" , num1)
 
 count = 0
 
-while num1 != 1:
+for count in range(1, count + 1):
+    if num1 == 1:
+        break
+    
     if num1 % 2 == 0:
         num1 = num1 // 2
     else:

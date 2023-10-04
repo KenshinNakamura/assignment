@@ -12,7 +12,7 @@ array = [3, 7, 0, 8, 4, 1, 9, 6, 5, 2]
 index_num = 0
 
 for _ in array:
-    diff = array[index_num] - array[index_num + 1]
+    diff = ( array[index_num] - array[index_num + 1] )
 
     print(f"要素{index_num}と要素{index_num + 1}の差: {diff}")
 

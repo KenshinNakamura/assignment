@@ -17,6 +17,4 @@ array = [3, 7, 0, 8, 4, 1, 9, 6, 5, 2]
 if 0 <= num1 < len(array) and 0 <= num2 < len(array):
     num_result = array[num1] * array[num2]
 
-    print("要素番号", num1, "と要素番号" , num2 , "の値は", 
-          array[num1] , "*" , array[num2] , "=" , num_result, "です。")
-
+    print(array[num1] , "*" , array[num2] , "=" , num_result)

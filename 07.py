@@ -7,6 +7,7 @@ if string == 0:
 else :
     print("not zero")
 
+print(f"input number :" , string)
 
 string2 = int(input("整数値を入力してください:"))
 if string2 == 0:
@@ -14,3 +15,5 @@ if string2 == 0:
 
 else :
     print("not zero")
+
+print(f"input number :" , string2)

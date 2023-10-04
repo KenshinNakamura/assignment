@@ -6,7 +6,10 @@
 num1 = int(input("入場者数を入力してください: "))
 print(f"入場者数" , num1)
 
-if num1 >= 5:
+if 5 > num1 >= 1:
+    ticket = 600
+
+elif num1 >= 5:
     ticket = 550
 
 elif num1 >= 20:
