@@ -4,7 +4,7 @@
 
 #入場者数
 num1 = int(input("入場者数を入力してください: "))
-print(f"入場者数" , num1)
+print(f"人数 {num1}")
 
 if 5 > num1 >= 1:
     ticket = 600
@@ -21,5 +21,5 @@ else:
 result = num1 * ticket
 
 # 料金を表示
-print(f"{num1}人の時の入場料金は、一人{ticket}円の場合、合計{result}円です。")
+print(f"料金 {result}")
 

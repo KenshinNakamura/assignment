@@ -4,7 +4,7 @@
 
 # 乗車した距離（m単位）を入力
 distance = int(input("乗車した距離（m単位）を入力してください: "))
-print(f"距離 " , distance)
+print(f"距離 {distance}")
 
 # 初乗り料金と追加料金の計算
 initial_fare = 610  # 初乗り料金（610円）
@@ -18,5 +18,5 @@ else:
     total_fare = initial_fare + additional_fare
 
 # 料金を表示
-print(f"料金は{total_fare}円です。")
+print(f"金額{total_fare}")
 
