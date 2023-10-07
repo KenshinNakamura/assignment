@@ -10,4 +10,7 @@ num1 = int(input("要素番号を入力してください: "))
 
 if 0 <= num1 <= len(array):
     index1 = array[num1]
-    print(index1)
+    if 0 <= index1 <= len(array):
+        result = array[index1] 
+    print(f"input number : {num1}")
+    print(f"value = {result}")

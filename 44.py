@@ -3,15 +3,14 @@
 #1セントは1/100ドルである。結果は整数値でよい（1セント未満の端数切り捨て）。
 
 # 金額（円単位）と1ドル何円かを整数値で入力
-amount_in_yen = int(input("金額（円単位）を入力してください: "))
-print(f"何円?" , amount_in_yen)
+num1 = int(input("求める金額(円)を入力してください: "))
+num2 = int(input("現在の1ドルの値段(円)を入力してください: "))
 
-exchange_rate = int(input("1ドル何円かを入力してください: "))
-print(f"1ドルは何円?" , exchange_rate)
+#セントでは余りを求める
+yen = num1
+dole_yen = num2
+dole_result = yen // dole_yen
+cent_result = yen % dole_yen 
 
-# ドルとセントに変換
-dollars = amount_in_yen // exchange_rate
-cents = (amount_in_yen % exchange_rate) * 100 // exchange_rate
-
-# 結果
-print(f"{amount_in_yen}円は{dollars}ドル{cents}セント")
+#出力
+print(f"{yen}円は{dole_result}ドル{cent_result}セント")

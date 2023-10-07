@@ -3,7 +3,17 @@
 #2重の繰り返しを使わず単に表示するだけではダメ。値の間はタブ(\t)を使って間をあけること。
 
 
-for i1 in range(1, 10):
-    for i2 in range(1, 10):
-        result = i1 * i2
-        print(f"{result}\t")
+#for i1 in range(1, 10):
+    
+        #print(f"{i1}\t")
+
+# 変数の初期化
+str1 = ""
+
+for i2 in range(1, 10):
+    # 1から9までループする
+    for i1 in range(1, 10):    
+        str1 = str1 + (str(i1*i2)) + " \n "
+
+# 1行出力
+print(f"{str1}")
