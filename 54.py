@@ -3,25 +3,28 @@
 #データの個数は100個までとする。なお、データの個数とデータはファイルからリダイレクトで入力させればよいので、入力のためのメッセージは不要である（実行例を参照すること）。
 
 #作成途中
+import csv
 
-import 
+My_num = []
 
-#入力
-num1 = int(input("自然数を入力してください: "))
-L1 = list()
-i1 = 2
-if num1 > 0 :
-    print(f"input number :" , num1)
+MyPath = '/Users/nakamurakenshin/Documents/課題/基礎編/data.csv'
 
-else:
-    print(f"自然数ではないので入力し直してください")
+with open(MyPath) as f:
+    
+    data = csv.reader(f)
+    
+    for i in data:
+        print(i)
+        for j in i:
+            My_num.append(int(j))
+    print(My_num)
+    print(max(My_num))
+    print(min(My_num))
 
-#計算
-
-
-#出力
-print(f"")
-
-#メモ
- #素因数の計算部分が難しいためそこを他の記事を参考にし作りました  
- #ファイルを読み込んで　最小値最大値に変更する ファイル名はdate.csv 
+#import csv
+#with open("data.csv") as f:
+#    for row in csv.reader(f, quoting=csv.QUOTE_NONNUMERIC):
+#        print(f"Row: {row}")
+#上記のコードの欠点 float型の為、小数点がついた状態で表示させてしまう
+#int は整数型
+#csv.reader 配列
