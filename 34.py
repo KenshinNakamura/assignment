@@ -5,10 +5,7 @@
 num = int(input("整数値を入力してください: "))
 print(f"input number :" , num)
 
-i = 1
-while i <= 9:
+for i in range(1, 10):
     if i == num or i == num + 1:
-        i += 1
-        continue  # 入力値と入力値+1はスキップ
+        continue
     print(i)
-    i += 1

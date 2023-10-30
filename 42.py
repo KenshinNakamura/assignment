@@ -11,7 +11,7 @@ print(f"input number :" , num2)
 print(f"input number :" , num3)
 
 if num1 <= num2 <= num3:
-    print("おk")
+    print("OK")
 
 else:
     print("NG")

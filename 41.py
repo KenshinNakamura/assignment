@@ -5,7 +5,6 @@ num1 = int(input("要素番号を入力してください: "))
 print(f"input number :" , num1)
 
 if num1 > 0 and num1 < 10:
-    print("一桁の自然数である")
-
+    print(f"{num1} is a single figure.")
 else:
-    print("一桁の自然数ではない")
+    print(f"{num1} is not a single figure.")

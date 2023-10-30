@@ -7,18 +7,14 @@
 
 
 # 整数値を入力させる
-num = int(input("整数値を入力してください: "))
+num1 = int(input("整数値を入力してください: "))
+num2 = int(input("整数値を入力してください: "))
+print(f"input num1: {num1}")
+print(f"input num2: {num2}")
 
-# 入力値が0以下の場合は何も表示しない
-if num <= 0:
-    print("何も表示しません。")
-else:
-    # 5個おきに*とスペースを交互に表示する
-    for i in range(1, num + 1):
-        if i % 5 == 0:
-            print(" ", end="")
-        else:
-            print("*", end="")
-    
-    # 改行して表示を終了
-    print()
+#中身
+num1, num2 = num2, num1
+
+#出力
+
+print(f"num1 = {num1}, num2 = {num2}")
