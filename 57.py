@@ -1,45 +1,70 @@
-#No.56 2進数変換
-#0〜65535の整数値を入力させ、
-#入力値を16桁の2進数に変換して表示するプログラムを作成せよ。
+#No.57 テスト集計
+#まず受験者数を入力させ、次に受験者数ごとに英語、数学、国語の点数をスペースで区切って入力させる（具体的な入力方法は下記のscanfの使い方の説明、および入力データの中身を見よ）。
+#入力が終了したら、英語、数学、国語の平均点、および各受験生の合計点を計算して表示するプログラムを作成せよ。
+#受験者数は100人までとする。なお、データの個数とデータはファイルからリダイレクトで入力させればよいので、入力のためのメッセージは不要である（実行例を参照すること）。
 
-#入力値
-int_input_num = int(input("自然数を入力してください: "))
-if -1 < int_input_num < 65536:
-    print (f"input number: {int_input_num}")
+#no.54で似た事例を行ったのでそれを参考に作成しています
+#受験者数はdata.csvの一番上の数字 その下の行に英 数 国とある
 
-#2進数への変換 例10 → 1010
-    bin_input_num     = bin(int_input_num) #10進数の入力値を2進数に変換している binはすでにstr型
-    str_bin_input_num:str = str(bin_input_num) #数値型を文字列型に変換させている
-    str_bin_input_num = str_bin_input_num[2:] #変数名[2:]で先頭2文字を削除している [:2]の場合は後ろに文字を削除
-##print(f"str_bin_input_num: {str_bin_input_num}") #一旦0bが消えたかの確認 後で消す
-
-#合計16桁になるように0の追加 例.10 → 0000000000001010
- #str_bin_input_num に0を追加する 
- #16 - str_bin_input_num の結果の数だけ0を追加する この場合は12個追加する
- #12回ループさせる 回数がわかっているためforの方が良い 仮の変数[0]に一回ループするごとに1ずつ数を足していく
-
-    int_material_num     = 16 #二進数の数と比較するための数値
-    int_len_input_num    = len(str_bin_input_num) #str_bin_input_numの数を測る
-##print(f"str_bin_input_numの数値幅{int_len_input_num}") 
-
-##print(type(int_material_num)) #int_material_numの型を表示させる
-    int_bin_input_num    = int(str_bin_input_num) #int型の変数をstr型にしたい
-    int_result_input_num = int_material_num - int_len_input_num #桁数16 - 二進数の数を変数に入れる
-##print("int_result_input_num",int_result_input_num) #上記の計算結果合計16に足りない分の数値幅
-
-    for i in range(int_result_input_num): 
-        str_bin_input_num = "0" + str_bin_input_num
-    ##print(str_bin_input_num) #ループチェック
+#データファイルの読み込み
+#scanfの代理工程
+#データは英,数,国の順でならんんでいる
+import csv #csvの読み込み
+MyPath_data = '/Users/nakamurakenshin/Documents/課題/基礎編/data_57.csv' #data57.csvのデータを読み込みMyPathにしまっている
 
 
-#結果の出力 例. 0000000000001010
+loop_count       = 0
 
-    print(str_bin_input_num)
+Total_English_score  = 0
+Total_Math_score     = 0
+Total_Language_score = 0
 
-else:
-    print(f"指定数値のオーバー")
+int_sum_score = 0
 
-#result = bin(int_input_num)
-#print (f"{result}") #←は0bがつく表示の仕方
-#print (f"{int_input_num:b}") #0bなし
-#print (f"{int_input_num - 1:b}")
+
+with open(MyPath_data) as My_Path_data_f: #MyPath_dataを開きMyPath_data_fにしまっている
+
+    array_all_data            = csv.reader(My_Path_data_f) #一行目の読み込み
+    
+    
+    #英語の平均点
+    for i in array_all_data:                 #データ全体を変数iに入れてループさせている
+        int_English_score     = int(i[0])     #i はstr型だったのでint型に変換し変数int_English_scoreに入れている
+        int_Math_score        = int(i[1])
+        int_Language_score    = int(i[2])
+        loop_count           += 1                 #ループするたびにloop_countに1を足していきループした回数を可視化させる
+        Total_English_score  += int_English_score 
+                                        #↑は変数Total_English_scoreに英語の点数を全て足して変数に入れている 合計値は463
+        Total_Math_score     += int_Math_score
+        Total_Language_score += int_Language_score
+
+    My_Path_data_f.seek(0)
+    Result_English_score      = Total_English_score // loop_count
+    Result_Math_score         = Total_Math_score // loop_count
+    Result_Language_score     = Total_Language_score // loop_count
+    print(f"英語の平均点 {Result_English_score}")
+    print(f"数学の平均点 {Result_Math_score}")
+    print(f"国語の平均点 {Result_Language_score}")
+
+        #print(type(int_English_score)) #int_English_scoreの文字タイプを調べる
+        #print(i)                       #全体のデータを一人ずつ調べる
+        #print(loop_count)              #何回ループしたのかを調べる
+        #print(Total_English_score)     #英語の合計点を調べる 正しい数値は463
+
+    
+
+    #各受験生の合計点
+    #forでEng,math,Lan をループ毎に足してループ毎にprintさせる
+    #ループは2個で
+
+    loop_count = 0
+
+    for i_sum in array_all_data:
+        int_English_score     = int(i_sum[0])
+        int_Math_score        = int(i_sum[1])
+        int_Language_score    = int(i_sum[2])
+        loop_count   += 1
+
+        #print(int_English_score,int_Math_score,int_Language_score)
+        int_sum_score = int_English_score + int_Math_score + int_Language_score
+        print(f"生徒{loop_count}の合計点 {int_sum_score}")
